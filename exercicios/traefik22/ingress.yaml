@@ -1,6 +1,6 @@
 ---
 kind: Ingress
-apiVersion: extensions/v1beta1
+apiVersion: v1
 metadata:
   name: traefik-daemon-set
   annotations:
@@ -9,7 +9,7 @@ metadata:
     traefik.ingress.kubernetes.io/router.tls.certresolver: default
 spec:
   rules:
-    - host: traefik.rancher.dev-ops-ninja.com
+    - host: traefik.rancher.cassucloud.ml
       http:
         paths:
           - backend:
