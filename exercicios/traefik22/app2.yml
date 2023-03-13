@@ -53,12 +53,16 @@ metadata:
     traefik.ingress.kubernetes.io/router.tls.certresolver: default
 spec:
   rules:
-    - host: app.rancher.<SEU_DOMINIO>
+    - host: app.rancher.casssucloud.ml
       http:
         paths:
-          - backend:
-              serviceName: whoami5
-              servicePort: 80
+        pathType: Exact
+            backend:
+              service:
+                name:  whoami5
+                port:
+                  number: 80
+          
 
 
 
